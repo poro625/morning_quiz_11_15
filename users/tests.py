@@ -13,6 +13,7 @@ class UserRegistrationTest(APITestCase):
         "email" : "test@test.com",
         "fullname" : "테스터",
         }
-        response = self.client.post(url, user_data)        
+        response = self.client.post(url, user_data)
+        print(response.data)  
         self.assertEqual(response.status_code, 200)
 
